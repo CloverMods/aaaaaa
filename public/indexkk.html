@@ -1,0 +1,399 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="visitas.js"></script>
+    <body id="page-top" onload="getvisitor();">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></lzmods-api/></title>
+    <meta property="og:title" content="LZ MODS - Rest Api">  
+    <meta name="description" content="Rest De Api's Em Desenvolvimento">
+    <meta property="og:image" content="https://telegra.ph/file/655283493047a9452a934.jpg">
+    <link rel="apple-touch-icon" href="https://telegra.ph/file/655283493047a9452a934.jpg">
+    <link rel="shortcut icon" href="https://telegra.ph/file/655283493047a9452a934.jpg">
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/cd desktopdefault.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  <audio id="music" autoplay loop> 
+   <source src="./musica.mp3" type="audio/mp3"> 
+  </audio> 
+
+  <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+</head>
+
+<body id="page-top" class="dark-mode">
+    <div id="wrapper">
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-light accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <i class="fa fa-biohazard fa-2x"></i>
+                <div class="sidebar-brand-text mx-3">lz rest api's</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="/">
+                    <i class="fas fa-fw fa-thermometer-three-quarters"></i>
+                    <span>Documentação </></span></a>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+               Apis
+            </div>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseDownload" aria-expanded="true" aria-controls="collapseBootstrap">
+                    <i class="far fa-play-circle"></i>
+                    <span>Youtube</span>
+                </a>
+                <div id="collapseDownload" class="collapse" aria-labelledby="headingBootstrap" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="yt/playmp3?&musica=malvadao3&apikey=lzmods" target="_blank"><i class="fab fa-youtube"></i>
+                             Youtube Play Audio</a>
+
+                        <a class="collapse-item" href="yt/playmp4?&musica=malvadao3e&apikey=lzmods" target="_blank"><i class="fab fa-youtube"></i>
+
+                            Youtube Play Video</a>
+                        <a class="collapse-item" href="yt/playlink/mp4?&link=malvadao3e&apikey=lzmods" target="_blank"><i class="fab fa-youtube"></i>
+
+                            Ytmp4</a>
+                        <a class="collapse-item" href="yt/playlink/mp3?&link=malvadao3e&apikey=lzmods" target="_blank"><i class="fab fa-youtube"></i>
+
+                            Ytmp3</a>
+              
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseImage" aria-expanded="true" aria-controls="collapseTable">
+                    <i class="fab fa-searchengin"></i>
+                    <span>Apis De Pesquisas</span>
+                </a>
+                <div id="collapseImage" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="search/playstore?app=freefire&apikey=lzmods" target="_blank"><i class="fab fa-google-play"></i>
+                            Play Store Search</a>
+                            <a class="collapse-item" href="search/pinterest?nome=kid bengala&apikey=lzmods" target="_blank"><i class="far fa-image"></i>
+                                Pinterest Search</a>
+                                <a class="collapse-item" href="search/letra?musica=malvadao3&apikey=lzmods" target="_blank"><i class="fas fa-music"></i>
+                                    Letra Da Musica Search</a>
+                    </div>
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseImagee" aria-expanded="true" aria-controls="collapseTable">
+                        <i class="fas fa-download"></i>
+                        <span>Apis De Download</span>
+                    </a>
+                    <div id="collapseImagee" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+                        <div class="py-2 collapse-inner rounded">
+                            <a class="collapse-item" href="download/mediafire?link=http://www.mediafire.com/file/u92r5cewixhoedf/ALEATORY_BOT_4.2.apk/file&apikey=lzmods" target="_blank"><i class="fas fa-cloud-download-alt"></i>
+                                Mediafire Download</a>
+                                <a class="collapse-item" href="download/googledrive?link=https://drive.google.com/file/d/1JNt_wulvQZ55KJaQGYRuzfFKyIQIhH1X/view&apikey=lzmods" target="_blank"><i class="fas fa-cloud-download-alt"></i>
+                                    Google Drive Download</a>
+                        </div>
+                    </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseConsultas" aria-expanded="true" aria-controls="collapseTable">
+                    <i class="fas fa-user-secret"></i>
+                    <span>Apis De Consulta
+                </a>
+                <div id="collapseConsultas" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/apis-limitadas/consultas/cpf?cpf=96944161168&apikey=lzmods" target="_blank"><i class="fas fa-fire"></i>
+                            Consultar CPF  <span class="badge badge-success">!</span></a>
+                        <a class="collapse-item" href="consultas/cnpj?cnpj=27865757000102&apikey=lzmods" target="_blank"><i class="fas fa-arrow-circle-right"></i>
+                            Consultar CNPJ</a>
+                        <a class="collapse-item" href="consultas/ip?ip=8.8.8.8&apikey=lzmods" target="_blank"><i class="fas fa-arrow-circle-right"></i>
+                            Consultar IP</a>
+                        <a class="collapse-item" href="consultas/cep?cep=01153000&apikey=lzmods" target="_blank"><i class="fas fa-arrow-circle-right"></i>
+                            Consultar Cep</a>
+                            <a class="collapse-item" href="consultas/cepv2?cep=01153000&apikey=lzmods" target="_blank"><i class="fas fa-arrow-circle-right"></i>
+                                Consultar Cep V2</a>
+                            <a class="collapse-item" href="consultas/ddd?ddd=62&apikey=lzmods" target="_blank"><i class="fas fa-arrow-circle-right"></i>
+                                Consultar DDD</a>
+                    </div>
+                </div>
+    </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTextPro" aria-expanded="true" aria-controls="collapseForm">
+                    <i class="fas fa-images"></i>
+                    <span>Canvas</span>
+                </a>
+                <div id="collapseTextPro" class="collapse" aria-labelledby="headingForm" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" target="_blank" href="/canvass/welcome-v1?titulo=Bem Vindo(a)&fotodeperfil=https://telegra.ph/file/655283493047a9452a934.jpg&nome=lz mods oficial&nomedogrupo=Entrou Em: Chat Do LZ&fotodofundo=https://telegra.ph/file/f45a76e1d47ed3b533573.jpg&apikey=lzmods"><i class="fas fa-image"></i>  Bem Vindo V1</a>
+                        <a class="collapse-item" target="_blank" href="/canvass/goodbye-v1?titulo=adeus&fotodeperfil=https://telegra.ph/file/655283493047a9452a934.jpg&nome=lz mods oficial&nomedogrupo=Saiu De: Chat Do LZ&fotodofundo=https://telegra.ph/file/f45a76e1d47ed3b533573.jpg&apikey=lzmods"><i class="fas fa-image"></i>  Adeus V1</a>
+                        <a class="collapse-item" target="_blank" href="/canvas/clyde?texto=</lzmods-api/>&apikey=lzmods"><i class="fas fa-image"></i>  Clyde Discord</a>
+                        <a class="collapse-item" target="_blank" href="/canvas/trigger?url=https://telegra.ph/file/655283493047a9452a934.jpg&apikey=lzmods"><i class="fas fa-image"></i>  Trigged</a>
+                        <a class="collapse-item" target="_blank" href="/canvas/changemymind?texto=</lzmods-api/>&apikey=lzmods"><i class="fas fa-image"></i>  ChangeMyMind</a>
+                    </div>
+                </div>
+         </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseRandomText" aria-expanded="true" aria-controls="collapseTable">
+                    <i class="fas fa-grin-hearts"></i>
+                    <span>Nsfw API</span>
+                </a>
+                <div id="collapseRandomText" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" target="_blank" href="nsfw/loli?apikey=lzmods"><i class="far fa-smile"></i> Nsfw Loli</a>
+                        <a class="collapse-item" target="_blank" href="nsfw/hentai?apikey=lzmods"><i class="far fa-smile"></i> Nsfw Hentai</a>
+                        <a class="collapse-item" target="_blank" href="nsfw/elisa-sanches?apikey=lzmods"><i class="far fa-smile"></i> Nsfw Elisa Sanches</a>
+                        <a class="collapse-item" target="_blank" href="nsfw/miakhalifa?apikey=lzmods"><i class="far fa-smile"></i> Nsfw Mia Khalifa</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseInfo" aria-expanded="true" aria-controls="collapseTable">
+                    <i class="fa fa-fw fa-text-width"></i>
+                    <span>Text Pro</span>
+                </a>
+                <div id="collapseInfo" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" target="_blank" href="/textpro/pornhub-logo?texto1=lzmods&texto2=api&apikey=lzmods"><i class="fas fa-angle-right"></i>
+
+                             Porn Hub Logo</a>
+                        <a class="collapse-item" target="_blank" href="/textpro/joker-logo?texto=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i>
+
+                             Joker Logo</a>
+                        <a class="collapse-item" target="_blank" href="/textpro/harrypotter-logo?texto=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i> Harry Potter Logo</a>
+                        <a class="collapse-item" target="_blank" href="/textpro/future-logo?texto=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i>
+
+                            Futuro Logo</a>
+                        <a class="collapse-item" target="_blank" href="/textpro/neon3d-logo?texto=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i>
+
+                            Neon 3d Logo</a>
+                        <a class="collapse-item" target="_blank" href="/textpro/thunder-logo?texto=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i> Thunder Logo</a>
+                        <a class="collapse-item" target="_blank" href="/textpro/stone-logo?texto1=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i> Stone Logo</a>
+                        <a class="collapse-item" target="_blank" href="/textpro/glitch-logo?texto=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i> Glitch Logo</a>
+                        <a class="collapse-item" target="_blank" href="/textpro/glitch2-logo?texto=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i> Glitch Logo V2</a>
+                        <a class="collapse-item" target="_blank" href="/textpro/cam-logo?texto=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i> Camera Logo</a>
+
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseEntern" aria-expanded="true" aria-controls="collapseTable">
+                    <i class="fas fa-user-friends"></i>
+                    <span>Medias Sociais</span>
+                </a>
+                <div id="collapseEntern" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" href="/download/tiktok?link=https://vm.tiktok.com/ZMLJDgYLV/&apikey=lzmods" target="_blank"><span class="iconify" data-icon="cib:tiktok"></span>
+                            TikTok Play</a>
+                            <a class="collapse-item" href="/download/instagram?link=https://www.instagram.com/tv/CYtbo6zLaXK/&apikey=lzmods" target="_blank"><i class="fab fa-instagram"></i>
+                            Instagram Play</a>
+                            <a class="collapse-item" href="/download/twitter?link=https://twitter.com/a_lzmods/status/1481971538786197505?s=20&apikey=lzmods" target="_blank"><i class="fab fa-twitter"></i>
+                            Twitter Play</a>        
+                    </div>
+                </div>
+                </li>
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseCreator" aria-expanded="true" aria-controls="collapseTable">
+                    <i class="fas fa-info-circle"></i>
+                    <span>Outros</span>
+                </a>
+                <div id="collapseCreator" class="collapse" aria-labelledby="headingTable" data-parent="#accordionSidebar">
+                    <div class="py-2 collapse-inner rounded">
+                        <a class="collapse-item" target="_blank" href="others/fazernick?nome=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i> Fazer Nick</a>
+                        <a class="collapse-item" target="_blank" href="others/attp?texto=lzmods-api&apikey=lzmods"><i class="fas fa-angle-right"></i> ATTP</a>
+                       <a class="collapse-item" target="_blank" href="others/tradutor?texto=oi&linguagem=en&apikey=lzmods"><i class="fas fa-angle-right"></i> Tradutor</a>
+                       <a class="collapse-item" target="_blank" href="others/camufladordelinks?link=https://lzmods-api.herokuapp.com&apikey=lzmods"><i class="fas fa-angle-right"></i> Encurtador Tinyurl</a>
+                    </div>
+                </div>
+            </li>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">
+                Contato Do LZ MODS
+            </div>
+            <li class="nav-item">
+                <a class="nav-link" href="https://wa.me/556284944742">
+                    <i class="fab fa-fw fa-whatsapp"></i>
+                    <span>Whatsapp</span>       
+                </a>
+            </li>
+            <hr class="sidebar-divider">
+        </ul>
+        <!-- Sidebar -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
+                <!-- TopBar -->
+                <nav class="navbar navbar-expand navbar-light bg-navbar topbar mb-4 static-top">
+                    <button id="sidebarToggleTop" class="btn btn-link rounded-circle mr-3">
+            <i class="fa fa-bars"></i>
+          </button>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fa fa-user-circle fa-2x"></i>
+                    <span class="ml-2 d-none d-lg-inline small font-weight-bold">lzmods-api </span>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- Topbar -->
+
+                <!-- Container Fluid-->
+                <div class="container-fluid" id="container-wrapper">
+                    <div class="card h-50 mb-4">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col mr-2">
+                                    <div class="text-md-left font-weight-bold mb-2 text-primary">Seja Bem Vindo(a)</div>
+                                    <div class="text-sm-left mb-0 font-weight-bold">Opa :) todas as apis desse site sao gratuitas! diariamente venho atualizando o site para correçao de bugs e etc... caso encontre algum bug/error contate o dono.                                       
+                                    </div>
+                                </div>
+                                <div class="col-auto">
+                                    <i class="fas fa-quote-right fa-2x text-primary"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+<div class="row mb-3">
+                        <!-- Earnings (Monthly) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card h-50">
+                                <div class="card-body">
+                                    <div class="row align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-uppercase mb-1">HORAS</div>
+                                            <div class="h5 mb-0 font-weight-bold" id="hora">Horas...</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-clock fa-2x text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Earnings (Annual) Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card h-50">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-uppercase mb-1">Apikey Gratis</div>
+                                            <div class="h5 mb-0 font-weight-bold">lzmods</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-key fa-2x text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- New User Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card h-50">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-uppercase mb-1">Total De Acessos</div>
+                                            <div class="count font-weight-bold" id="visits">carregando...</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-users fa-2x text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Pending Requests Card Example -->
+                        <div class="col-xl-3 col-md-6 mb-4">
+                            <div class="card h-50">
+                                <div class="card-body">
+                                    <div class="row no-gutters align-items-center">
+                                        <div class="col mr-2">
+                                            <div class="text-xs font-weight-bold text-uppercase mb-1">DATA </div>
+                                            <div class="h5 mb-0 font-weight-bold" id="resultado">Horas...</div>
+                                        </div>
+                                        <div class="col-auto">
+                                            <i class="fas fa-calendar fa-2x text-primary"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Row-->
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            Ajude-me
+                            <p>                                
+                                <a href="https://pag.ae/7XVS16qVn" class="btn btn-primary btn-sm ml-2" target="_blank"><i class="fab fa-fw fa-cc-mastercard"></i>&nbsp;Pag Bank</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <!---Container Fluid-->
+            </div>
+            <!-- Footer -->
+            <footer class="sticky-footer">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        Made With <i class="fa fa-heart"></i>
+                        <a href="http://Wa.me/+556284944742" target="_blank" style="color: #fff;">LZ MODS</a>
+                        </span>
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer -->
+        </div>
+    </div>
+  <!-- Scroll to top -->
+    <!-- Scroll to top -->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+        </div><div class="swal2-container swal2-center swal2-fade swal2-shown" style="overflow-y: auto;"><div aria-labelledby="swal2-title" aria-describedby="swal2-content" class="swal2-popup swal2-modal swal2-show" tabindex="-1" role="dialog" aria-live="assertive" aria-modal="true" style="display: flex;"><div class="swal2-header"><ul class="swal2-progresssteps" style="display: none;"></ul><div class="swal2-icon swal2-error" style="display: none;"><span class="swal2-x-mark"><span class="swal2-x-mark-line-left"></span><span class="swal2-x-mark-line-right"></span></span></div><div class="swal2-icon swal2-question" style="display: none;"><span class="swal2-icon-text">?</span></div><div class="swal2-icon swal2-warning" style="display: none;"><span class="swal2-icon-text">!</span></div><div class="swal2-icon swal2-info" style="display: none;"><span class="swal2-icon-text">i</span></div><div class="swal2-icon swal2-success" style="display: none;"><div class="swal2-success-circular-line-left" style="background-color: rgb(255, 255, 255);"></div><span class="swal2-success-line-tip"></span> <span class="swal2-success-line-long"></span><div class="swal2-success-ring"></div> <div class="swal2-success-fix" style="background-color: rgb(255, 255, 255);"></div><div class="swal2-success-circular-line-right" style="background-color: rgb(255, 255, 255);"></div></div><img class="swal2-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqnFy6TGFZDiBERhTyOMUbcoCQNzG0Y79zgg&usqp=CAU" alt="Olá :)" width="200" height="200" style="display: flex;"><h2 class="swal2-title" id="swal2-title" style="display: flex;">Bem-Vindo</h2><button type="button" class="swal2-close" style="display: none;">×</button></div><div class="swal2-content"><div id="swal2-content" style="display: block;">Aproveitem nossos simples recursos ꨄ︎</div><input class="swal2-input" style="display: none;"><input type="file" class="swal2-file" style="display: none;"><div class="swal2-range" style="display: none;"><input type="range"><output></output></div><select class="swal2-select" style="display: none;"></select><div class="swal2-radio" style="display: none;"></div><label for="swal2-checkbox" class="swal2-checkbox" style="display: none;"><input type="checkbox"><span class="swal2-label"></span></label><textarea class="swal2-textarea" style="display: none;"></textarea><div class="swal2-validation-message" id="swal2-validation-message" style="display: none;"></div></div><div class="swal2-actions" style="display: flex;"><button type="button" class="swal2-confirm swal2-styled" aria-label="" style="border-left-color: rgb(48, 133, 214); border-right-color: rgb(48, 133, 214);">OK</button><button type="button" class="swal2-cancel swal2-styled" aria-label="" style="display: none;">Cancel</button></div><div class="swal2-footer" style="display: flex;">Made By ❤️ ExTeam</div></div></div></body></html>
+
+    </a>
+	
+
+ </script>
+
+         <!-- Javascript -->
+         <script src="/script/jquery.min.js"></script>
+         <script src="/script/index.js"></script>
+ 
+ <script> 
+    const resultado = document.getElementById("resultado") 
+    var data = new Date();
+    
+    var dia = String(data.getDate()).padStart(2, '0');
+    
+    var mes = String(data.getMonth() + 1).padStart(2, '0');
+    
+    var ano = data.getFullYear();
+    
+    dataAtual = dia + '/' + mes + '/' + ano;
+    
+    resultado.innerHTML = dataAtual;
+
+ </script>
+
+ <script>  
+const hora = document.getElementById('hora');
+
+const format_0_616c6963656d696e6861636163686f72696e6861 = n => {
+				return ('0' + n).slice(-2);
+			}
+const interval = setInterval(() => {
+const now = new Date();
+
+const horax = format_0_616c6963656d696e6861636163686f72696e6861(now.getHours()) + ':' + format_0_616c6963656d696e6861636163686f72696e6861(now.getMinutes()) + ':' + format_0_616c6963656d696e6861636163686f72696e6861(now.getSeconds());
+
+hora.innerHTML = horax;
+}, 1000);
+   </script>
+   
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <script src="js/ruang-admin.min.js"></script>
+</body>
+
+</html>
